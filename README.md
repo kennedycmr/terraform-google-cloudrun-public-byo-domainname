@@ -17,8 +17,8 @@ To use this module:
 module "website" {
   source = "<url to this git repo>"
 
-  GCP_PROJECT_ID         = var.GCP_PROJECT_ID
-  GCP_DEPLOYMENT_REGION  = var.GCP_DEPLOYMENT_REGION
+  GCP_PROJECT_ID         = "gcpprojectid"
+  GCP_DEPLOYMENT_REGION  = "us-east4"
   CLOUDRUN_SA_EMAIL      = "serviceaccount@gcpprojectid.iam.gserviceaccount.com"
   CLOUDRUN_PRD_CONTAINER = "gcr.io/gcpprojectid/deployment/revision_v1-1-2"
   CLOUDRUN_NAME          = "deployment-prd"
