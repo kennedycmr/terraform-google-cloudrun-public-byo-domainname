@@ -42,4 +42,5 @@ locals {
   PUBLIC_IP_NAME      = "${var.CLOUDRUN_NAME}-public-ip"
   PUBLIC_IP_DESC      = "Publically accessible IP address provisioned for Cloud Run instance ${local.PUBLIC_IP_NAME}"
   SSL_CERT_NAME       = replace(var.DOMAIN_NAME, ".", "-")
+  WAF_NAME            = "${var.CLOUDRUN_NAME}-waf-policy"
 }

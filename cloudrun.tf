@@ -13,6 +13,13 @@ resource "google_cloud_run_service" "prd" {
     }
   }
 
+  metadata {
+    annotations = {
+      "run.googleapis.com/ingress" = "internal-and-cloud-load-balancing"
+    }
+  }
+
+
   traffic {
     percent         = 100
     latest_revision = true
@@ -34,7 +41,3 @@ resource "google_cloud_run_service_iam_policy" "prd" {
   service     = google_cloud_run_service.prd.name
   policy_data = data.google_iam_policy.prd.policy_data
 }
-
-
-
-
