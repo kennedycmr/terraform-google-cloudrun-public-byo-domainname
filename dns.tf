@@ -9,7 +9,7 @@ module "dns-public-zone" {
 
   recordsets = [
     {
-      name = var.DOMAIN_NAME
+      name = ""
       type = "A"
       ttl  = 300
       records = [
